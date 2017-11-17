@@ -12,7 +12,7 @@
     <Version>1.0.3.0</Version>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Abp.MailKit" Version="3.1.2" />
+    <PackageReference Include="Abp.MailKit" Version="3.2.2" />
     <PackageReference Include="NJsonSchema" Version="9.10.9" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
