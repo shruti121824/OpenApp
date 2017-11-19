@@ -54,14 +54,15 @@
     <None Remove="Views\lib\element-ui\lib\theme-default\fonts\element_icons.ttf" />
     <None Remove="Views\lib\element-ui\lib\theme-default\fonts\element_icons.woff" />
     <None Remove="Views\lib\element-ui\lib\theme-default\index.css" />
-    <None Remove="Views\lib\json-ref-lite\json-ref-lite.min.js" />
+    <None Remove="Views\lib\json-ref-lite\json-ref-lite-min.js" />
     <None Remove="Views\lib\vueforms\bundle.js" />
+    <None Remove="Views\lib\vue\vue-min.js" />
+    <None Remove="Views\lib\vue\vue-router-min.js" />
     <None Remove="Views\lib\vue\vue.js" />
     <None Remove="Views\lib\vue\vue.min.js" />
-    <None Remove="Views\_Bundles\account-layout.min.css" />
-    <None Remove="Views\_Bundles\account-layout.min.js" />
-    <None Remove="Views\_Bundles\shared-layout.min.css" />
-    <None Remove="Views\_Bundles\shared-layout.min.js" />
+    <None Remove="Views\_Bundles\account-layout-min.js" />
+    <None Remove="Views\_Bundles\shared-layout-min.css" />
+    <None Remove="Views\_Bundles\shared-layout-min.js" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\Account\Login.css" />
@@ -79,7 +80,6 @@
     <EmbeddedResource Include="Views\lib\element-ui\lib\theme-default\fonts\element_icons.ttf" />
     <EmbeddedResource Include="Views\lib\element-ui\lib\theme-default\fonts\element_icons.woff" />
     <EmbeddedResource Include="Views\lib\element-ui\lib\theme-default\index.css" />
-    <EmbeddedResource Include="Views\lib\json-ref-lite\json-ref-lite.min.js" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="bundleconfig.json">
@@ -100,15 +100,16 @@
     <EmbeddedResource Include="Views\img\logo.png" />
     <EmbeddedResource Include="Views\js\app.js" />
     <EmbeddedResource Include="Views\js\main.js" />
+    <EmbeddedResource Include="Views\lib\json-ref-lite\json-ref-lite-min.js" />
     <EmbeddedResource Include="Views\lib\vueforms\bundle.js" />
-    <EmbeddedResource Include="Views\lib\vue\vue_router.js" />
-    <EmbeddedResource Include="Views\lib\vue\vue_router.min.js" />
+    <EmbeddedResource Include="Views\lib\vue\vue-min.js" />
+    <EmbeddedResource Include="Views\lib\vue\vue-router-min.js" />
+    <EmbeddedResource Include="Views\lib\vue\vue-router.js" />
     <EmbeddedResource Include="Views\lib\vue\vue.js" />
-    <EmbeddedResource Include="Views\lib\vue\vue.min.js" />
-    <EmbeddedResource Include="Views\_Bundles\account-layout.min.css" />
-    <EmbeddedResource Include="Views\_Bundles\account-layout.min.js" />
-    <EmbeddedResource Include="Views\_Bundles\shared-layout.min.css" />
-    <EmbeddedResource Include="Views\_Bundles\shared-layout.min.js" />
+    <EmbeddedResource Include="Views\_Bundles\account-layout-min.css" />
+    <EmbeddedResource Include="Views\_Bundles\account-layout-min.js" />
+    <EmbeddedResource Include="Views\_Bundles\shared-layout-min.css" />
+    <EmbeddedResource Include="Views\_Bundles\shared-layout-min.js" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\_ViewImports.cshtml">

@@ -1,6 +1,6 @@
 [
   {
-    "outputFileName": "Views/_Bundles/account-layout.min.css",
+    "outputFileName": "Views/_Bundles/account-layout-min.css",
     "inputFiles": [
       "Views/fonts/roboto/roboto.css",
       "Views/lib/toastr/toastr.css",
@@ -14,7 +14,7 @@
     ]
   },
   {
-    "outputFileName": "Views/_Bundles/account-layout.min.js",
+    "outputFileName": "Views/_Bundles/account-layout-min.js",
     "inputFiles": [
       "Views/lib/coreui/jquery/dist/jquery.min.js",
       "Views/lib/coreui/popper.js/index.js",
@@ -40,7 +40,7 @@
     ]
   },
   {
-    "outputFileName": "Views/_Bundles/shared-layout.min.css",
+    "outputFileName": "Views/_Bundles/shared-layout-min.css",
     "inputFiles": [
       "Views/fonts/roboto/roboto.css",
       "Views/lib/toastr/toastr.css",
@@ -53,7 +53,7 @@
     ]
   },
   {
-    "outputFileName": "Views/_Bundles/shared-layout.min.js",
+    "outputFileName": "Views/_Bundles/shared-layout-min.js",
     "inputFiles": [
       "Views/lib/coreui/jquery/dist/jquery.min.js",
       "Views/lib/coreui/popper.js/index.js",
@@ -83,13 +83,13 @@
     ]
   },
   {
-    "outputFileName": "Views/Account/Login.min.js",
+    "outputFileName": "Views/Account/Login-min.js",
     "inputFiles": [
       "Views/Account/Login.js"
     ]
   },
   {
-    "outputFileName": "Views/Account/Register.min.js",
+    "outputFileName": "Views/Account/Register-min.js",
     "inputFiles": [
       "Views/Account/Register.js"
     ]
