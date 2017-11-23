@@ -92,21 +92,22 @@ namespace Satrabel.OpenApp.Startup
             if (SwaggerEnabled)
             {
                 services.AddSwaggerGen(options =>
-            {
-                options.SwaggerDoc("v1", new Info { Title = "OpenApp API", Version = "v1" });
-                options.DocInclusionPredicate((docName, description) => true);
-
-                // Define the BearerAuth scheme that's in use
-                options.AddSecurityDefinition("bearerAuth", new ApiKeyScheme()
                 {
-                    Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
-                    Name = "Authorization",
-                    In = "header",
-                    Type = "apiKey"
+                    options.SwaggerDoc("v1", new Info { Title = "OpenApp API", Version = "v1" });
+                    options.DocInclusionPredicate((docName, description) => true);
+                    options.CustomSchemaIds(x => x.FullName);
+                    options.DescribeAllEnumsAsStrings();
+                    // Define the BearerAuth scheme that's in use
+                    options.AddSecurityDefinition("bearerAuth", new ApiKeyScheme()
+                    {
+                        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+                        Name = "Authorization",
+                        In = "header",
+                        Type = "apiKey"
+                    });
+                    // Assign scope requirements to operations based on AuthorizeAttribute
+                    options.OperationFilter<SecurityRequirementsOperationFilter>();
                 });
-                // Assign scope requirements to operations based on AuthorizeAttribute
-                options.OperationFilter<SecurityRequirementsOperationFilter>();
-            });
             }
             //Configure Abp and Dependency Injection
             return services.AddAbp<TModule>(options =>
