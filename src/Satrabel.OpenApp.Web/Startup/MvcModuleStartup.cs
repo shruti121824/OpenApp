@@ -31,6 +31,7 @@ using Swashbuckle.AspNetCore.Swagger;
 using System.Linq;
 using Abp.Extensions;
 using Abp.Dependency;
+using Abp.AspNetCore.EmbeddedResources;
 
 #if FEATURE_SIGNALR
 using Owin;
@@ -109,6 +110,7 @@ namespace Satrabel.OpenApp.Startup
                     options.OperationFilter<SecurityRequirementsOperationFilter>();
                 });
             }
+            services.AddDirectoryBrowser();
             //Configure Abp and Dependency Injection
             return services.AddAbp<TModule>(options =>
             {
@@ -150,6 +152,14 @@ namespace Satrabel.OpenApp.Startup
             ConfigureBeforeStaticFiles(app, env);
             app.UseStaticFiles();
             app.UseEmbeddedFiles();
+
+
+            app.UseDirectoryBrowser(new DirectoryBrowserOptions()
+            {
+                FileProvider = new EmbeddedResourceFileProvider(app.ApplicationServices.GetRequiredService<IIocResolver>()),
+                RequestPath = new PathString("/Views")
+            });
+
             app.UseAuthentication();
             app.UseJwtTokenMiddleware();
 

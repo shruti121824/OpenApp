@@ -173,6 +173,8 @@
     <EmbeddedResource Include="Views\css\style.css" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\aspboilerplate\src\Abp.AspNetCore\Abp.AspNetCore.csproj" />
+    <ProjectReference Include="..\..\..\..\aspboilerplate\src\Abp.ZeroCore\Abp.ZeroCore.csproj" />
     <ProjectReference Include="..\Satrabel.OpenApp.Application\Satrabel.OpenApp.Application.csproj" />
     <ProjectReference Include="..\Satrabel.OpenApp.EntityFramework\Satrabel.OpenApp.EntityFramework.csproj" />
   </ItemGroup>
@@ -184,7 +186,6 @@
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Owin" Version="2.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="1.1.0" />
-    <PackageReference Include="Abp.AspNetCore" Version="3.2.2" />
     <PackageReference Include="Abp.ZeroCore" Version="3.2.2" />
     <PackageReference Include="Microsoft.AspNetCore" Version="2.0.1" />
   </ItemGroup>

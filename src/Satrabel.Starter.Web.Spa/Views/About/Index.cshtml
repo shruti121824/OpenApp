@@ -16,3 +16,16 @@
 <div class="container-fluid">
     <h2>About</h2>
 </div>
+
+
+@using Abp.Resources.Embedded
+@model IEnumerable<EmbeddedResourceItem>
+
+<h2>Folder Contents</h2>
+
+<ul>
+    @foreach (var item in Model)
+    {
+            <li>@item.FileName</li>
+    }
+</ul>
