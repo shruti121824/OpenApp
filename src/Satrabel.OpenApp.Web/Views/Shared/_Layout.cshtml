@@ -5,6 +5,7 @@
 @using Satrabel.OpenApp
 @using Satrabel.OpenApp.SignalR
 @using Satrabel.OpenApp.Web.Resources
+@using Satrabel.OpenApp.Web.Views.Shared.Components.TopBarArea
 @using Satrabel.OpenApp.Web.Views.Shared.Components.SideBarNav
 @using Satrabel.OpenApp.Web.Views.Shared.Components.SideBarUserArea
 @using Satrabel.OpenApp.Web.Views.Shared.Components.AccountLanguages
@@ -37,10 +38,10 @@
     <link rel="shortcut icon" href="img/favicon.png">
     <title>@WebConfig.MetaTitle</title>
     <environment names="Development">
-        <link href="~/Views/_Bundles/shared-layout-min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/Views/_Bundles/shared-layout.min.css" rel="stylesheet" asp-append-version="true" />
     </environment>
     <environment names="Staging,Production">
-        <link href="~/Views/_Bundles/shared-layout-min.css" rel="stylesheet" asp-append-version="true" />
+        <link href="~/Views/_Bundles/shared-layout.min.css" rel="stylesheet" asp-append-version="true" />
     </environment>
     <!-- View specific styles -->
     @RenderSection("styles", required: false)
@@ -94,6 +95,7 @@
 
         <ul class="nav navbar-nav ml-auto">
            
+            @await Component.InvokeAsync(typeof(TopBarAreaViewComponent))
             @await Component.InvokeAsync(typeof(SideBarUserAreaViewComponent))
             @await Component.InvokeAsync(typeof(AccountLanguagesViewComponent))
           
@@ -450,20 +452,14 @@
     <!-- Plugins and scripts required by this views -->
     <!-- Custom scripts required by this view -->
     <environment names="Development">
-        <script src="~/Views/_Bundles/shared-layout-min.js" asp-append-version="true"></script>
-        <!-- GenesisUI main scripts -->
-        <script src="~/Views/js/app.js" asp-append-version="true"></script>
-        <script src="~/Views/js/main.js" asp-append-version="true"></script>
+        <script src="~/Views/_Bundles/shared-layout.min.js" asp-append-version="true"></script>
         @if (SignalRFeature.IsAvailable)
         {
             <script src="~/lib/signalr/jquery.signalR.js" asp-append-version="true"></script>
         }
     </environment>
     <environment names="Staging,Production">
-        <script src="~/Views/_Bundles/shared-layout-min.js" asp-append-version="true"></script>
-        <!-- GenesisUI main scripts -->
-        <script src="~/Views/js/app.js" asp-append-version="true"></script>
-        <script src="~/Views/js/main.js" asp-append-version="true"></script>
+        <script src="~/Views/_Bundles/shared-layout.min.js" asp-append-version="true"></script>
     </environment>
     <script>
     //Localizing momentjs
